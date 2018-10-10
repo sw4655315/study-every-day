@@ -1,6 +1,16 @@
 package com.study.ACID;
 
 
+import org.apache.ibatis.executor.SimpleExecutor;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.test.context.junit4.SpringRunner;
+
 /**
  * 事务 - 隔离性
  * 数据库允许多个并发事务同时对其数据进行读写和修改的能力，隔离性可以防止多个事务并发执
@@ -16,6 +26,16 @@ package com.study.ACID;
  *  2. 集群事务(?) mysql集群
  * @author jisong.sun on 2018/10/9.
  */
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class Isolation {
+
+    @Autowired
+    SqlSessionFactory sqlSession;
+
+    @Test
+    public void Read_Uncommitted(){
+
+    }
 
 }
